@@ -1,0 +1,11 @@
+= form_for(@post, html: {class: 'form-horizontal'}) do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title
+
+  .form-group
+    = f.label :content
+    = f.text_area :content
+
+  .form-group
+    = f.submit class: "btn btn-primary"

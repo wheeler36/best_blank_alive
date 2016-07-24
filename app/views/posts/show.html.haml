@@ -1,0 +1,5 @@
+%h2= @post.title
+%p= @post.content
+
+%button.btn.btn-success= link_to "Edit", edit_post_path(@post)
+%button.btn.btn-danger= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "You Sure?"}
