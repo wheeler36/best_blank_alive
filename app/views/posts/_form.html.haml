@@ -1,11 +1,12 @@
-= form_for(@post, html: {class: 'form-horizontal'}) do |f|
-  .form-group
-    = f.label :title
-    = f.text_field :title
+.col-xs-12
+  = form_for(@post, html: {class: 'form-horizontal'}) do |f|
+    .form-group
+      = f.label :title
+      = f.text_field :title,  class: "form-control"
 
-  .form-group
-    = f.label :content
-    = f.text_area :content
+    .form-group
+      = f.label :content
+      = f.text_area :content, class: "form-control"
 
-  .form-group
-    = f.submit class: "btn btn-primary"
+    .form-group
+      = f.submit class: "btn btn-primary"

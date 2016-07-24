@@ -1,5 +1,13 @@
-%h2= @post.title
-%p= @post.content
+#show_banner.banner
+  .container
+    .row
+      %h1 Here's what I think
+.wrapper
+  .container
+    .row
+      .col-sm-10.col-sm-offset-1
+        %h2= @post.title
+        %p= @post.content
 
-%button.btn.btn-success= link_to "Edit", edit_post_path(@post)
-%button.btn.btn-danger= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "You Sure?"}
+        %button.btn.btn-success= link_to "Edit", edit_post_path(@post)
+        %button.btn.btn-danger= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "You Sure?"}

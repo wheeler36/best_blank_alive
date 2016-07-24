@@ -1,9 +1,15 @@
-.container
-  .row
-    .col-md-6.col-md-offset-3
-      - @posts.each do |post|
-        .post
-          %h2= link_to post.title, post
-          %p= post.content
+#welcome_banner.banner
+  .container
+    .row
+      %h1 What do you think?
+      %p Thundercats cold-pressed bicycle rights chia tote bag, blue bottle cornhole freegan direct trade everyday carry brunch vegan paleo. Semiotics kombucha seitan, stumptown roof party vice 8-bit. Twee banh mi pug tattooed. PBR&B polaroid 90's meh, humblebrag marfa bushwick gentrify cronut trust fund church-key fashion axe kinfolk yuccie keffiyeh.
+.wrapper
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        - @posts.each do |post|
+          .post
+            %h2= link_to post.title, post
+            %p= post.content
 
-      = link_to "New Post", new_post_path
+        = link_to "New Post", new_post_path

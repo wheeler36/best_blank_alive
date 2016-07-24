@@ -17,8 +17,106 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$white: #FFFFFF;
+$text: #000000;
+$link_text: #3e3737;
+
+body {
+	color: $text;
+	a {
+		color: $link_text;
+	}
+	a:hover {
+			color: #2c91af;
+			text-decoration: none;
+		}
+}
+
+.wrapper {
+	padding: 5rem 0 10rem;
+	margin: 1rem 0 5rem;
+}
+
 .btn {
 	a {
 		color: #FFF;
 	}
+	a:hover {
+		color: inherit;
+	}
+}
+
+.best_alive {
+	color: gold;
+	.blank {
+		color: red;
+	}
+}
+.navbar {
+	margin-bottom: 0;
+	padding: 1rem 0;
+}
+
+.icon-bar {
+	background-color: $link_text;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: $white;
+  h1, h2, p {
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  h1 {
+  	padding: 8.5rem 0 6rem;
+  	font-size: 5rem;
+  }
+  h2 {
+  	font-size: 4rem;
+  	padding: 8.5rem 0 7rem;
+  }
+  p {
+  	font-size: 2rem;
+  	font-weight: 400;
+  	padding: 2.5rem 1rem;
+  }
+}
+
+#welcome_banner {
+	background-image: image-url('railway-station.jpg');
+}
+
+#new_banner {
+	background-image: image-url('frog.jpg');
+	padding: 2rem 0;
+}
+
+#edit_banner {
+	background-image: image-url('potatoes.jpg');
+}
+
+#show_banner {
+	background-image: image-url('leaf.jpg');
+}
+
+#sign_up_banner {
+	background-image: image-url('');
+}
+
+#sign_in_banner {
+	background-image: image-url('');
+}
+
+footer {
+	background-image: image-url('winter-sheep.jpg');
+	color: $text !important;
 }

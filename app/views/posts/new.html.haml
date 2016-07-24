@@ -1,5 +1,12 @@
-%h1 New Post
+#new_banner.banner
+  .container
+    .row
+      %h1 This is going to be the <span class="best_alive">best <span class="blank">post </span>alive!</span>
+.wrapper
+  .container
+    .row
+      %h1 New Post
 
-= render 'form'
+      = render 'form'
 
-= link_to "Home", root_path
+      = link_to "Home", root_path
