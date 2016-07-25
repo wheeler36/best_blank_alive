@@ -11,8 +11,12 @@
           %span.blank= @post.title
           Alive:
           %span.choice= @post.choice
+        %h3.author
+          Opinion by
+          %span.user= @post.user.username
         .content= markdown @post.content
 
 
-        %button.btn.btn-success= link_to "Edit", edit_post_path(@post)
-        %button.btn.btn-danger= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "You Sure?"}
+        - if @post.user == current_user
+          %button.btn.btn-success= link_to "Edit", edit_post_path(@post)
+          %button.btn.btn-danger= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "You Sure?"}

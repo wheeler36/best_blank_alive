@@ -76,6 +76,17 @@ body {
 	color: red;
 }
 
+.author {
+	font-weight: 700;
+	.user {
+		font-size: 3.25rem;
+	}
+}
+
+.user {
+	color: coral;
+}
+
 .content {
 	font-size: 1.75rem;
 	margin: 4rem 0;
