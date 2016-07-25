@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
-
+gem 'devise', '~> 4.2'
 group :development, :test do
   gem 'byebug'
 end

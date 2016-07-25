@@ -21,8 +21,19 @@
 
         .collapse.navbar-collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to "Home", root_path
-            %li= link_to "New Post", new_post_path
+            - if user_signed_in?
+              %li= link_to "New Post", new_post_path, class: "button"
+              %li= link_to "Account", edit_user_registration_path
+              %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+            - else
+              %li= link_to "Sign in", new_user_session_path
+              %li= link_to "Sign Up", new_user_registration_path, class: "button"
+
+    - if alert
+      %p.alert= alert
+    - elsif notice
+      %p.notice= notice
+      
     = yield
     %footer.banner
       %h2 Don't be a sheep! That's baaaaaad... Like that joke.
