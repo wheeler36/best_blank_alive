@@ -79,11 +79,21 @@ body {
 .content {
 	font-size: 1.75rem;
 	margin: 4rem 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
 }
 
 .navbar {
 	margin-bottom: 0;
 	padding: 1rem 0;
+	.navbar-header {
+		.navbar-brand {
+			font-size: 3rem;
+		}
+	}
+	li {
+		font-size: 1.75rem;
+	}
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -92,6 +102,20 @@ body {
 
 .icon-bar {
 	background-color: $link_text;
+}
+
+#alert_alert {
+	background: rgba(255, 215, 0, 0.87);
+	width: 100%;
+	z-index: 9999;
+	position: absolute;
+	.alert, .notice {
+		color: $white;
+		text-align: center;
+		font-weight: bold;
+		font-size: 2.5rem;
+		padding: 1.35rem 0;
+	}
 }
 
 textarea {
@@ -142,11 +166,23 @@ textarea {
 }
 
 #sign_up_banner {
-	background-image: image-url('');
+	background-image: image-url('dock.jpg');
 }
 
 #sign_in_banner {
-	background-image: image-url('');
+	background-image: image-url('pier.jpg');
+}
+
+#account_banner {
+	background-image: image-url('climbing.jpg');
+}
+
+#new_password_banner {
+	background-image: image-url('desert.jpg');
+}
+
+#edit_password_banner {
+	background-image: image-url('jurassic-coast.jpg');
 }
 
 footer {

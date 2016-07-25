@@ -1,0 +1,33 @@
+<div id="new_password_banner" class="banner">
+  <div class="container">
+    <div class="row">
+      <h1>Let me guess... You're lost?</h1>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10.col-sm-offset-1">
+        <h2>Forgot your password?</h2>
+
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= devise_error_messages! %>
+
+          <div class="form-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+          </div><br>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+
+      </div>
+    </div>
+  </div>
+</div>

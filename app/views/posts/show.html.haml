@@ -11,7 +11,7 @@
           %span.blank= @post.title
           Alive:
           %span.choice= @post.choice
-        %p.content= markdown @post.content
+        .content= markdown @post.content
 
 
         %button.btn.btn-success= link_to "Edit", edit_post_path(@post)

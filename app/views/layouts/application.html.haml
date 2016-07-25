@@ -7,6 +7,13 @@
     = csrf_meta_tags
 
   %body
+    - if alert
+      #alert_alert
+        %p.alert= alert
+    - elsif notice
+      #alert_alert
+        %p.notice= notice
+
     %nav.navbar.navbar-static-top{role: "navigation"}
       .container-fluid
         .navbar-header
@@ -29,10 +36,6 @@
               %li= link_to "Sign in", new_user_session_path
               %li= link_to "Sign Up", new_user_registration_path, class: "button"
 
-    - if alert
-      %p.alert= alert
-    - elsif notice
-      %p.notice= notice
       
     = yield
     %footer.banner

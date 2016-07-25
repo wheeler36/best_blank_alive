@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to @post, notice: "Congratulations are in order it seems. Your post has been updated."
+      redirect_to @post, notice: "Success! Update complete!"
     else
       render 'edit'
     end
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
   def authorized_user
     @post = current_user.posts.find_by(id: params[:id])
-    redirect_to root_path, notice: "Not authorized to edit this post" if @post.nil?
+    redirect_to root_path, notice: "No soup for you!" if @post.nil?
   end
 
   def post_params

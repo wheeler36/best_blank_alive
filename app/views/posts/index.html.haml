@@ -15,7 +15,7 @@
                 %span.blank= post.title
                 Alive:
                 %span.blank= post.choice
-              %p= markdown truncate(post.content, length: 200)
+              .content-index= markdown truncate(post.content, length: 200)
             %p.date
               = time_ago_in_words(post.created_at)
               ago
