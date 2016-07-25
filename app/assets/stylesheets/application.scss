@@ -27,9 +27,9 @@ body {
 		color: $link_text;
 	}
 	a:hover {
-			color: #2c91af;
-			text-decoration: none;
-		}
+		color: #2c91af;
+		text-decoration: none;
+	}
 }
 
 .wrapper {
@@ -46,15 +46,48 @@ body {
 	}
 }
 
-.best_alive {
-	color: gold;
-	.blank {
-		color: red;
+.post {
+	padding: 2rem;
+	border: 1px transparent;
+	border-radius: 3px;
+	transition: all 0.4s ease-in-out;
+	a:hover {
+		color: initial;
+	}
+	&:hover {
+		box-shadow: 0px 2px 40px 0 rgba(0, 0, 0, 0.1)
 	}
 }
+
+.best_alive {
+	.blank {
+		font-size: 4.5rem;
+	}
+	.choice {
+		font-size: 5rem;
+	}
+}
+
+.blank {
+	color: gold;
+}
+
+.choice {
+	color: red;
+}
+
+.content {
+	font-size: 1.75rem;
+	margin: 4rem 0;
+}
+
 .navbar {
 	margin-bottom: 0;
 	padding: 1rem 0;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: inherit;
 }
 
 .icon-bar {
