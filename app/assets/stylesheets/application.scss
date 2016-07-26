@@ -22,6 +22,7 @@ $text: #000000;
 $link_text: #3e3737;
 
 body {
+	font-family: 'Lato', sans-serif;
 	color: $text;
 	a {
 		color: $link_text;
@@ -131,6 +132,16 @@ body {
 
 textarea {
 	resize: vertical;
+}
+
+.comment {
+	.comment_content {
+		font-size: 1.75rem;
+	}
+}
+
+.icons_right {
+	float: right;
 }
 
 .banner {

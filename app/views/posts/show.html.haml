@@ -15,6 +15,17 @@
           Opinion by
           %span.user= @post.user.username
         .content= markdown @post.content
+        #comments
+          %h2.comment_count= pluralize(@post.comments.count, "Comment")
+          - @comments.each do |comment|
+            .comment
+              %p.user= comment.user.username
+              .comment_content= markdown comment.content
+              - if comment.user == current_user
+                %button.btn.btn-sm.btn-danger= link_to "Delete", post_comment_path(@post, comment), method: :delete, data: {confirm: "You Sure?"}
+              %hr
+
+          = render 'comments/form'
 
 
         - if @post.user == current_user
