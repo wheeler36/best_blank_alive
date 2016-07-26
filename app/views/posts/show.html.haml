@@ -14,6 +14,13 @@
         %h3.author
           Opinion by
           %span.user= @post.user.username
+        .likes
+          = link_to like_post_path(@post), method: :get, class: "data" do
+            %i.fa.fa-2x.fa-thumbs-o-up
+            = pluralize(@post.get_upvotes.size, "Like")
+          = link_to dislike_post_path(@post), method: :get, class: "data" do
+            %i.fa.fa-2x.fa-thumbs-o-down
+            = pluralize(@post.get_downvotes.size, "Dislike")
         .content= markdown @post.content
         #comments
           %h2.comment_count= pluralize(@post.comments.count, "Comment")
