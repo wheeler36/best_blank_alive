@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :posts do
     member do
       get "like", to: "posts#upvote"
@@ -7,5 +8,8 @@ Rails.application.routes.draw do
     end
     resources :comments
   end
+  get 'posts/index'
   root 'posts#index'
+
+  get '*path' => redirect('/')
 end

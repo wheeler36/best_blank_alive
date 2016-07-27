@@ -221,3 +221,31 @@ footer {
 	background-image: image-url('winter-sheep.jpg');
 	color: $text !important;
 }
+
+.pagination {
+	width: 100%;
+	text-align: center;
+	a, span, em {
+		padding: 0.25rem 0.75rem;
+		margin: 0 .35rem;
+		background: $white;
+		font-weight: 700;
+		font-size: 1.35rem;
+		color: $text;
+		&:hover {
+			background: $accent;
+			color: $white;
+		}
+	}
+	.current {
+		background: $accent;
+		color: $white;
+	}
+	.disabled {
+		color: #d3d3d3;
+		&:hover {
+			color: #d3d3d3;
+			background: $white;
+		}
+	}
+}

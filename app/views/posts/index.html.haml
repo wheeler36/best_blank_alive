@@ -26,3 +26,4 @@
                 = post.comments.count
                 %i.fa.fa-thumbs-o-up
                 = post.get_likes.size
+        = will_paginate @posts, previous_label: "Previous", next_label: "Next"

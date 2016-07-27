@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'devise', '~> 4.2'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'will_paginate', '~> 3.1'
 
 group :development, :test do
   gem 'byebug'

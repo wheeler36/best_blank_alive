@@ -30,7 +30,7 @@
               .comment_content= markdown comment.content
               - if comment.user == current_user
                 %button.btn.btn-sm.btn-danger= link_to "Delete", post_comment_path(@post, comment), method: :delete, data: {confirm: "You Sure?"}
-              %hr
+                %hr
 
           = render 'comments/form'
 

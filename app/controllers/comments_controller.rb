@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  before_action :authorized_user, only: [:destroy]
-  before_action :find_comment, only: [:show, :destroy]
+  before_action :authorized_user, only: [:edit, :update, :destroy]
+  before_action :find_comment, only: [:show, :edit, :update, :destroy]
 
   def show
   end
