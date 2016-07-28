@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get "like", to: "posts#upvote"
       get "dislike", to: "posts#downvote"
     end
-    resources :comments
+    resources :comments, except: [:index, :edit, :update]
   end
   get 'posts/index'
   root 'posts#index'
