@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.6'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -16,6 +15,7 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'devise', '~> 4.2'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'will_paginate', '~> 3.1'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 group :development, :test do
   gem 'byebug'
@@ -26,3 +26,11 @@ group :development do
   gem 'spring'
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
