@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -94,6 +94,10 @@ body {
 	margin: 4rem 0;
     line-height: 1.5;
     letter-spacing: 0.5px;
+}
+
+.content-index {
+	font-size: 1.70rem;
 }
 
 .navbar {
@@ -182,6 +186,7 @@ textarea {
 
 #welcome_banner {
 	background-image: image-url('railway-station.jpg');
+	padding: 1rem 0 2rem;
 }
 
 #new_banner {
@@ -225,7 +230,7 @@ footer {
 .pagination {
 	width: 100%;
 	text-align: center;
-	a, span, em {
+	a, span, rem {
 		padding: 0.25rem 0.75rem;
 		margin: 0 .35rem;
 		background: $white;
